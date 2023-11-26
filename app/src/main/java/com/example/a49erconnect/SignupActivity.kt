@@ -17,7 +17,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var uncc_number: EditText;
     private lateinit var uncc_password: EditText;
     private lateinit var btn_signup: Button;
-    private lateinit var btn_login: Button;
+//    private lateinit var btn_login: Button;
     //    firebase auth
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDbRef: DatabaseReference
@@ -41,7 +41,7 @@ class SignupActivity : AppCompatActivity() {
         uncc_name = findViewById(R.id.uncc_name)
         uncc_number = findViewById(R.id.uncc_number)
         uncc_password = findViewById(R.id.uncc_password)
-        btn_login = findViewById(R.id.btn_login)
+//        btn_login = findViewById(R.id.btn_login)
         btn_signup = findViewById(R.id.btn_signup)
 
 
