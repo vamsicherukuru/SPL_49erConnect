@@ -1,7 +1,8 @@
 # SPL_49erConnect
 
 ## Description
-SPL_49erConnect is a Kotlin-based Android Studio app designed to provide XYZ services to XYZ users at XYZ institution. This app aims to facilitate XYZ functionalities for students, faculty, or staff.
+The "49ers Connect" project is dedicated to creating a specialized real-time chat application exclusively tailored for the UNCC student community. This endeavor aims to establish a secure and efficient communication platform accessible solely to UNCC students through their @uncc.edu email addresses.
+
 
 ## Installation and Setup (Windows)
 
