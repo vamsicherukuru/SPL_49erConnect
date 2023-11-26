@@ -30,19 +30,20 @@
         android:layout_marginRight="20dp"
 
         />
+
     <EditText
         android:id="@+id/uncc_password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
         android:layout_below="@id/uncc_email"
-        android:paddingLeft="14dp"
-        android:hint="Password"
         android:layout_marginLeft="20dp"
-        android:background="@drawable/uncc_background"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/uncc_background"
+        android:hint="Password"
+        android:inputType="textPassword"
 
-        />
+        android:paddingLeft="14dp" />
 
 
     <Button
