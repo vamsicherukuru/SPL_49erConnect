@@ -18,6 +18,20 @@ The "49ers Connect" project is dedicated to creating a specialized real-time cha
    - Open Android Studio and install necessary SDK components and platform tools.
 
 ### Setting Up the Project
-1. **Clone the Repository:**
+3. **Clone the Repository:**
    ```bash
    git clone https://github.com/vamsicherukuru/SPL_49erConnect.git
+
+
+4. **Open the Project in Android Studio:**
+- Launch Android Studio.
+- Select "Open an Existing Project" and navigate to the directory where you cloned the repository (SPL_49erConnect).
+- Wait for Android Studio to sync and build the project. This may take a few minutes depending on the project size and dependencies.
+5. **Configuration and Running:**
+
+- Resolve any dependencies or library issues that may arise during the build process.
+- Connect a physical Android device or use the created AVD to run and test the app.
+- Make sure the necessary permissions and configurations specific to the app (e.g., API keys, configurations for UNCC student access) are correctly set up.
+6. **Testing:**
+
+Test the app thoroughly to ensure its functionality, especially the real-time chat feature intended for UNCC students.
