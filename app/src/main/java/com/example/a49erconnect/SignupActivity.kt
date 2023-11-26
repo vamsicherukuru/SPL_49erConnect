@@ -25,6 +25,11 @@ class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+
+        supportActionBar?.hide()
+
+
+
         mAuth = FirebaseAuth.getInstance()
 
 
@@ -49,6 +54,19 @@ class SignupActivity : AppCompatActivity() {
 
 
     private fun signUp(email: String, password: String){
+
+        val unccEmailRegex = Regex("^\\S+@uncc\\.edu\$")
+
+        if (!unccEmailRegex.matches(email)) {
+            // Email doesn't match the required pattern
+            Toast.makeText(this@SignupActivity, "Please make sure to use UNCC Email", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+
+
+
+
 //        logic of creating user
 
 
