@@ -87,6 +87,16 @@ class MainActivity : AppCompatActivity() {
             return true
         }
 
+        if(item.itemId == R.id.profile){
+            // Handle profile menu item click
+            val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+            startActivity(intent)
+            return true
+        }
+
+
+
+
         return true
     }
 
