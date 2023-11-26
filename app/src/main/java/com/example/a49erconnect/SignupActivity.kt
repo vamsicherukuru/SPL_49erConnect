@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignupActivity : AppCompatActivity() {
 
@@ -16,10 +18,12 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var uncc_password: EditText;
     private lateinit var btn_signup: Button;
     private lateinit var btn_login: Button;
-
-
     //    firebase auth
     private lateinit var mAuth: FirebaseAuth
+    private lateinit var mDbRef: DatabaseReference
+
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,17 +47,20 @@ class SignupActivity : AppCompatActivity() {
 
 
         btn_signup.setOnClickListener {
+
+            val uncc_name = uncc_name.text.toString()
+            val uncc_number = uncc_number.text.toString()
             val email = uncc_email.text.toString()
             val password = uncc_password.text.toString()
 
 
-            signUp(email,password)
+            signUp(uncc_name,uncc_number,email,password)
         }
 
     }
 
 
-    private fun signUp(email: String, password: String){
+    private fun signUp(uncc_name: String, uncc_number: String,email: String, password: String){
 
         val unccEmailRegex = Regex("^\\S+@uncc\\.edu\$")
 
@@ -75,9 +82,15 @@ class SignupActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
 
+                    addUserToDatabase(uncc_name,uncc_number,email,mAuth.currentUser?.uid!!)
+
+
                     //code for jumping to homeactivity
 
                     val intent = Intent(this@SignupActivity, MainActivity::class.java)
+
+                    finish()
+
                     startActivity(intent)
 
 
@@ -90,5 +103,19 @@ class SignupActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
+
+    private fun addUserToDatabase(uncc_name: String,uncc_number: String, email:String, uid: String){
+
+
+        mDbRef = FirebaseDatabase.getInstance().getReference()
+
+        mDbRef.child("user").child(uid).setValue(User(uncc_name,uncc_number,email,uid))
+
+    }
+
 
 }
