@@ -5,6 +5,7 @@ SPL_49erConnect is a Kotlin-based Android Studio app designed to provide XYZ ser
 
 ## Installation and Setup (Windows)
 
+
 ### Prerequisites
 1. **Java Development Kit (JDK):**
    - Download and install the latest JDK for Windows from [Oracle's website](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html).
