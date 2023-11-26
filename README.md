@@ -1,5 +1,6 @@
 Installation and Setup (Windows)
 Prerequisites
+
 Java Development Kit (JDK):
 
 Download and install the latest JDK for Windows from Oracle's website.
