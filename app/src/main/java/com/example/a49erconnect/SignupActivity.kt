@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -17,6 +18,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var uncc_number: EditText;
     private lateinit var uncc_password: EditText;
     private lateinit var btn_signup: Button;
+    private lateinit var goback: ImageView;
 //    private lateinit var btn_login: Button;
     //    firebase auth
     private lateinit var mAuth: FirebaseAuth
@@ -41,11 +43,14 @@ class SignupActivity : AppCompatActivity() {
         uncc_name = findViewById(R.id.uncc_name)
         uncc_number = findViewById(R.id.uncc_number)
         uncc_password = findViewById(R.id.uncc_password)
+        goback = findViewById(R.id.goback)
 //        btn_login = findViewById(R.id.btn_login)
         btn_signup = findViewById(R.id.btn_signup)
 
 
-
+        goback.setOnClickListener {
+            finish()
+        }
         btn_signup.setOnClickListener {
 
             val uncc_name = uncc_name.text.toString()

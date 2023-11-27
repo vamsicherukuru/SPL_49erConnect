@@ -23,6 +23,7 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content"
         android:weightSum="100"
+
         >
 
 
@@ -32,6 +33,8 @@
             android:layout_height="50dp"
             android:hint="Type a message.."
             android:layout_weight="90"
+            android:elevation="10dp"
+
             android:layout_marginLeft="10dp"
             android:paddingLeft="10dp"
             android:layout_marginBottom="5dp"
@@ -45,6 +48,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/send"
+            android:elevation="10dp"
+
 
             />
     </LinearLayout>
